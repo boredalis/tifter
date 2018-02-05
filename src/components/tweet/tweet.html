@@ -1,0 +1,28 @@
+<div id="tweet">
+  <div><img class="fotoja" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBI3BjW5USUK8u4_UGkDVGWaERKMC20JIhG3wWdCr9dm92kDU" alt=""></div>
+  <div>
+    <div class="names">
+      <a href="">{{krejt_twiti.full_name}}</a>
+      <p>@{{krejt_twiti.username}}</p>
+    </div>
+    <p class="tweet-content">
+      {{krejt_twiti.content}}
+    </p>
+    <div class="helpmeh">
+      <div @click="updt_tweet('comments')">
+        <feather-icon class="hlpm" type="message-circle"></feather-icon>
+        <span v-if="comments > 0">{{comments}}</span>
+      </div>
+      <div @click="updt_tweet('retweets')">
+        <feather-icon class="hlpm2" type="repeat" ></feather-icon><span v-if="retweets > 0">{{retweets}}</span>
+      </div>
+      <div @click="updt_tweet('likes')">
+        <feather-icon class="hlpm" type="heart"></feather-icon><span v-if="likes > 0">{{likes}}</span>
+      </div>
+      <div>
+        <feather-icon class="hlpm" type="mail"></feather-icon>
+      </div>
+    </div>
+  </div>
+  <button @click="del_tweet()"><feather-icon type="x-circle"></feather-icon></button>
+</div>

@@ -1,0 +1,19 @@
+<div id="top-bar">
+  <nav>
+    <a href="" class="active">
+      <feather-icon class="fedherat" type="home"></feather-icon><span>Home</span></a>
+    <a href="">
+      <feather-icon class="fedherat" type="bell"></feather-icon><span>Notification</span></a>
+    <a href="">
+      <feather-icon class="fedherat" type="mail"></feather-icon><span>Messages</span></a>
+  </nav>
+  <span class="pllumi" ><feather-icon  type="twitter" ></feather-icon></span>
+  <div class="right">
+    <div class="pldh">
+      <input class="search" type="text" name="Search" placeholder="Search Twitter" v-model="user_search" @keyup="updateUserSearchInStore()">
+      <span class="fedheri"><feather-icon  class="fedheri" type="search" ></feather-icon></span>
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBI3BjW5USUK8u4_UGkDVGWaERKMC20JIhG3wWdCr9dm92kDU"></img>
+    <button @click="shtoNjo()">Tweet</button>
+  </div>
+</div>

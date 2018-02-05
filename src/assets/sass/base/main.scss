@@ -1,0 +1,15 @@
+// Main
+//
+// Define your global styling here
+html, body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  height: 100%;
+  width: 100%;
+  line-height:1.15;
+}
+
+#app, #app > div {
+	height: 100%;
+}

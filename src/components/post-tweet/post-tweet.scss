@@ -1,0 +1,70 @@
+    #post-tweet {
+      padding: 10px 25px;
+      background-color: #E8F5FD;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .img {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        margin: 0 10px;
+      }
+      .palidhje {
+        display: flex;
+      }
+      .onemore {
+        position: relative;
+        display: flex;
+      }
+      .input {
+        width: 600px;
+        padding: 10px;
+        border-radius: 10px;
+        border-style: none;
+        border: solid 0.5px #C6E7FB;
+        font-size: 14px;
+        font-weight: 350;
+        &:focus {
+          outline: none;
+          border: solid 1px #55a2f3;
+        }
+        &::placeholder {
+          color: #1DA1F2;
+        }
+      }
+      .diqka {
+        >svg {
+          stroke: #55a2f3;
+        }
+        color: #55a2f3;
+        position: absolute;
+        top: 8px;
+        right: 20px;
+      }
+      .butonat {
+        display: none;
+        &.showbutonat {
+          display: flex;
+          margin-left: auto;
+          padding: 5px 20px;
+          button {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+            border: solid 1px #1DA1F2;
+            border-radius: 100%;
+            padding: 5px;
+            &:focus {
+              outline: none;
+            }
+            svg {
+              width: 15px;
+              height: 15px;
+              stroke: #55a2f3;
+            }
+          }
+        }
+      }
+    }

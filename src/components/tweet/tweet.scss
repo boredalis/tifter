@@ -1,0 +1,83 @@
+#tweet {
+  display: flex;
+  padding: 10px 15px;
+  background-color: white;
+  margin-top: 2px;
+  letter-spacing: 0px;
+  font-size: 15px;
+  word-break:break-all;
+
+  button{
+    margin-left:auto;
+    border:none;
+    &:focus{
+      outline: none;
+    }
+    svg{
+      height:20px;
+      width:20px;
+      stroke:gray;
+      stroke-width:1.5;
+    }
+  }
+  .fotoja {
+    display: flex;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  a {
+    margin-right: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  p {
+    font-weight: 350;
+    color: rgba(gray, .9);
+    margin: 0px;
+    &.tweet-content {
+      color: black;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+  }
+  .helpmeh {
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    >div {
+      margin-right: 20px;
+      display:flex;
+      align-items:center;
+    }
+    .hlpm, .hlpm2{
+      stroke:gray;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+    .hlpm2{
+      transform:rotate(90deg);
+      :first-child{
+        stroke:gray;
+      }
+      :nth-child(2){
+        stroke:gray;
+      }
+      :nth-child(3){
+        stroke:gray;
+      }
+      :last-child{
+        stroke:gray;
+      }
+    }
+  }
+}
