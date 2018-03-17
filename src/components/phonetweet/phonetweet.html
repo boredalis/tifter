@@ -1,0 +1,22 @@
+<div class="phonetweet">
+  <div class="topbari">
+    <div @click="hiqetweetin()">
+      <feather-icon type="x"></feather-icon>
+    </div>
+    <div>
+      <feather-icon type="circle"></feather-icon>
+      <button @click="sendtweet()">TWEET</button>
+    </div>
+  </div>
+  <div class="writetweet">
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBI3BjW5USUK8u4_UGkDVGWaERKMC20JIhG3wWdCr9dm92kDU" alt="">
+    </div>
+    <textarea name="" id="teksti" cols="50" rows="10" v-model="inputvalue" placeholder="What's happening?" style="border:none; margin-top:10px;"></textarea>
+  </div>
+  <div class="icons">
+    <feather-icon type="image"></feather-icon>
+    <feather-icon type="film" class="gifi"></feather-icon>
+    <feather-icon type="bar-chart-2" class="charti"></feather-icon>
+  </div>
+</div>

@@ -1,70 +1,108 @@
-    #post-tweet {
-      padding: 10px 25px;
-      background-color: #E8F5FD;
+  #post-tweet {
+    padding: 10px 25px;
+    background-color: #E8F5FD;
+    display: flex;
+    flex-direction: column;
+    //width: 100%;
+    .img {
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      margin: 0 10px;
+    }
+    .palidhje {
       display: flex;
-      flex: 1;
-      flex-direction: column;
 
-      .img {
-        width: 35px;
-        height: 35px;
-        border-radius: 100%;
-        margin: 0 10px;
+    }
+    .onemore {
+      position: relative;
+      display: flex;
+    }
+    .input {
+      width: 600px;
+      padding: 10px;
+      border-radius: 10px;
+      border-style: none;
+      border: solid 0.5px #C6E7FB;
+      font-size: 14px;
+      font-weight: 350;
+      &:focus {
+        outline: none;
+        border: solid 1px #55a2f3;
       }
-      .palidhje {
+      &::placeholder {
+        color: #1DA1F2;
+      }
+    }
+    .diqka {
+      >svg {
+        stroke: #55a2f3;
+      }
+      color: #55a2f3;
+      position: absolute;
+      top: 8px;
+      right: 20px;
+    }
+    .butonat {
+      display: none;
+      &.showbutonat {
         display: flex;
-      }
-      .onemore {
-        position: relative;
-        display: flex;
-      }
-      .input {
-        width: 600px;
-        padding: 10px;
-        border-radius: 10px;
-        border-style: none;
-        border: solid 0.5px #C6E7FB;
-        font-size: 14px;
-        font-weight: 350;
-        &:focus {
-          outline: none;
-          border: solid 1px #55a2f3;
-        }
-        &::placeholder {
-          color: #1DA1F2;
-        }
-      }
-      .diqka {
-        >svg {
-          stroke: #55a2f3;
-        }
-        color: #55a2f3;
-        position: absolute;
-        top: 8px;
-        right: 20px;
-      }
-      .butonat {
-        display: none;
-        &.showbutonat {
+        margin-left: auto;
+        padding: 5px 20px;
+        button {
+          &.veqntelefon {
+            display: none;
+          }
           display: flex;
-          margin-left: auto;
-          padding: 5px 20px;
-          button {
-            display: flex;
-            align-items: center;
-            margin-left: 5px;
-            border: solid 1px #1DA1F2;
-            border-radius: 100%;
-            padding: 5px;
-            &:focus {
-              outline: none;
-            }
-            svg {
-              width: 15px;
-              height: 15px;
-              stroke: #55a2f3;
-            }
+          align-items: center;
+          margin-left: 5px;
+          border: solid 1px #1DA1F2;
+          border-radius: 100%;
+          padding: 5px;
+          &:focus {
+            outline: none;
+          }
+          svg {
+            width: 15px;
+            height: 15px;
+            stroke: #55a2f3;
           }
         }
       }
     }
+  }
+
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+    #post-tweet {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      width: max-content;
+      background-color: transparent;
+      .palidhje {
+        display: none;
+      }
+      .butonat {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    #post-tweet {
+      display: flex;
+      padding: 10px 0;
+      padding-right: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) and (min-width: 760px){
+    #post-tweet{
+      .input{
+        width:350px ;
+      }
+    }
+  }

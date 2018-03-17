@@ -2,11 +2,11 @@
   <div class="palidhje">
     <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBI3BjW5USUK8u4_UGkDVGWaERKMC20JIhG3wWdCr9dm92kDU" alt="">
     <div class="onemore">
-      <input @keyup.enter="postTweet()"  @click="showbuttons()" class="input" v-model="inputValue" type="text" placeholder="What's happening?">
+      <input @keyup.enter="postTweet()" @click="showbuttons()" class="input" v-model="inputValue" type="text" placeholder="What's happening?">
       <span class="diqka"><feather-icon type="image"></feather-icon></span>
     </div>
   </div>
-  <div class="butonat"  v-bind:class="{ showbutonat: isActive }" >
+  <div class="butonat" v-bind:class="{ showbutonat: isActive }">
     <button @click="postTweet()">
       <feather-icon type="plus"></feather-icon>
     </button>

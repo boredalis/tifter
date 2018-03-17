@@ -1,5 +1,5 @@
 /* ============
- * Post-tweet Component
+ * Phonetweet Component
  * ============
  *
  * todo: add documentation here!
@@ -7,27 +7,27 @@
 
 export default {
   data: () => ({
-    inputValue: null,
-    isActive:false,
+    inputvalue: null,
+
   }),
   methods: {
-    showbuttons(){
-      this.isActive=true;
+    hiqetweetin() {
+      this.$emit('closeTweetModal');
     },
-    postTweet() {
+    sendtweet() {
       let twitiJem = {
         username: 'auroraselimi',
         full_name: 'Aurora',
-        content: this.inputValue,
+        content: this.inputvalue,
         retweets: 0,
         likes: 0,
         comments: 0,
       };
       this.$store.commit('addTweet', twitiJem);
-      this.clearTweet();
+      this.hiqetweetin();
     },
-    clearTweet() {
-      this.inputValue = null;
-    },
+  },
+  mounted() {
+    console.log('Phonetweet component has been mounted!');
   },
 };

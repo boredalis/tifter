@@ -1,42 +1,56 @@
 <div id="parenti">
-  <top-bar></top-bar>
-  <section class="content">
-    <div class="col-1">
-      <profili></profili>
-      <div class="spodima">
-        <div class="trendsat">
-          <span>Trends for you</span>
-          <a href="">Change</a>
+  <phonetweet v-if="tweetntelefon" @closeTweetModal="hideTweetModal"></phonetweet>
+  <div v-if="parenti" class="conteiner">
+    <top-bar></top-bar>
+    <section class="content">
+      <div class="col-1">
+        <profili></profili>
+        <div class="spodima">
+          <div class="trendsat">
+            <span>Trends for you</span>
+            <a href="">Change</a>
+          </div>
+          <ul class="listat">
+            <li>
+              <a href="">#Merry Christmas</a>
+              <p>1,736 Tweets</p>
+            </li>
+            <li>
+              <a href="">#Merry Christmas</a>
+              <p>1,736 Tweets</p>
+            </li>
+            <li>
+              <a href="">#Merry Christmas</a>
+              <p>1,736 Tweets</p>
+            </li>
+            <li>
+              <a href="">#Merry Christmas</a>
+              <p>1,736 Tweets</p>
+            </li>
+          </ul>
         </div>
-        <ul class="listat">
-          <li>
-            <a href="">#Merry Christmas</a>
-            <p>1,736 Tweets</p>
-          </li>
-          <li>
-            <a href="">#Merry Christmas</a>
-            <p>1,736 Tweets</p>
-          </li>
-          <li>
-            <a href="">#Merry Christmas</a>
-            <p>1,736 Tweets</p>
-          </li>
-          <li>
-            <a href="">#Merry Christmas</a>
-            <p>1,736 Tweets</p>
-          </li>
-        </ul>
+        <div class="undercover">
+          <wtf></wtf>
+        </div>
       </div>
-      <div class="undercover">
+      <div class="col-2">
+        <post-tweet></post-tweet>
+        <feed></feed>
+      </div>
+      <div class="col-3">
         <wtf></wtf>
       </div>
+    </section>
+  </div>
+  <div class="the-fixed-one">
+    <div class="the-wrapper-of-mobile-button">
+      <div class="alert write-first" v-if="showAlert">
+        <p>Click here to write your first tweet!</p>
+        <div></div>
+      </div>
+      <button class="veqntelefon" @click="writetweet()" v-if="postbutton">
+        <feather-icon type="feather"></feather-icon>
+      </button>
     </div>
-    <div class="col-2">
-      <post-tweet></post-tweet>
-      <feed></feed>
-    </div>
-    <div class="col-3">
-      <wtf></wtf>
-    </div>
-  </section>
+  </div>
 </div>
