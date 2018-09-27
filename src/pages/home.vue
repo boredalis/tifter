@@ -9,6 +9,7 @@
   		wtf: require('@/components/wtf/wtf.vue'),
       feed: require('@/components/feed/feed.vue'),
       phonetweet: require('@/components/phonetweet/phonetweet.vue'),
+      trends: require('@/components/trends/trends.vue'),
   	},
     mounted() {
       this.$store.dispatch('getFeed');
@@ -40,6 +41,8 @@
       postbutton:true,
       overlay: false,
       showAlert: false,
+      trends:[{message:"BT21", tweets: "1,111 Tweets"},{message:"BT21", tweets: "1,111 Tweets"}],
+      suggestions:[{username:"Some Guy", user:"sm_guy"},{username:"Some Girl", user:"sm_guy"}],
     }),
     methods: {
       writetweet(){

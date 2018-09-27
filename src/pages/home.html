@@ -10,27 +10,19 @@
             <span>Trends for you</span>
             <a href="">Change</a>
           </div>
-          <ul class="listat">
-            <li>
-              <a href="">#Merry Christmas</a>
-              <p>1,736 Tweets</p>
-            </li>
-            <li>
-              <a href="">#Merry Christmas</a>
-              <p>1,736 Tweets</p>
-            </li>
-            <li>
-              <a href="">#Merry Christmas</a>
-              <p>1,736 Tweets</p>
-            </li>
-            <li>
-              <a href="">#Merry Christmas</a>
-              <p>1,736 Tweets</p>
-            </li>
-          </ul>
+          <trends v-for="trend in trends" :trend="trend"></trends>
         </div>
         <div class="undercover">
-          <wtf></wtf>
+         <div class="wtf">
+          <div class="fllw">
+            <span>Who to follow</span>
+            <a href="">Refresh</a>
+            <a href="">View all</a>
+          </div>
+          <div>
+            <wtf v-for="follow in suggestions" :follow="follow"></wtf>
+          </div>
+        </div>
         </div>
       </div>
       <div class="col-2">
@@ -38,7 +30,16 @@
         <feed></feed>
       </div>
       <div class="col-3">
-        <wtf></wtf>
+        <div class="wtf">
+          <div class="fllw">
+            <span>Who to follow</span>
+            <a href="">Refresh</a>
+            <a href="">View all</a>
+          </div>
+          <div>
+            <wtf v-for="follow in suggestions" :follow="follow"></wtf>
+          </div>
+        </div>
       </div>
     </section>
   </div>
